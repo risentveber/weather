@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-rsync . rs:/var/www/weather --delete -r
+rsync . rs:/var/www/meteohistory --delete -r
