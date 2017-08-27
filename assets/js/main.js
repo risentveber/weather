@@ -51,10 +51,10 @@ function loadDataFromDB(dataKey) {
         cursor.onsuccess = event => {
             const result = event.target.result;
             if(result) {
-                console.log('DB::chunk loaded', result.value);
                 data.push(result.value);
                 result.continue();
             } else {
+                console.log('DB::all chunks loaded');
                 resolve(data);
             }
         };
@@ -163,7 +163,7 @@ function getGraphicData(dataKey, from, to) {
 }
 
 function loadFromServer(dataKey) {
-    return window.fetch('/d/' + dataKey + '.json')
+    return window.fetch('./d/' + dataKey + '.json')
         .then(response => response.json())
         .then(rawData => {
             const length = MAX_YEAR - MIN_YEAR + 1;

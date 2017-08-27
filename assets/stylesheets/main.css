@@ -77,8 +77,6 @@ select {
 }
 
 .triangle {
-    padding: 10px;
-    border: 1px solid black;
     font-size: 50%;
     position: absolute;
     right: 10px;
